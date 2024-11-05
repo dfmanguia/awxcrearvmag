@@ -78,20 +78,7 @@
         name: bind9
         state: restarted
 
-- name: Changing network adapter
-  hosts: localhost
-  connection: local
-  gather_facts: false
-  tasks:
-    - name:  Changing network adapter
-      vmware_guest_network:
-        folder: "/DCUIO/vm/AWX"
-        validate_certs: no
-        name: "{{ vm_name }}"
-        networks:
-          - name: "vm_net_namemgmt"
-            connected: False
-         
+
         
     
         
