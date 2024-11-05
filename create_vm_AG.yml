@@ -8,7 +8,7 @@
       community.vmware.vmware_guest:
         validate_certs: false
         name: "{{ vm_name }}"
-        template: plantilla_helper_AG
+        template: plantilla_helper_airgap
         datacenter: DCUIO
         resource_pool: # Input Resource Pool
         folder: "/DCUIO/vm/AWX"
