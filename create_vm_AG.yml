@@ -79,6 +79,7 @@
         state: restarted
 
 - name: Changing network adapter
+  hosts: localhost
   tasks:
     - name:  Changing network adapter
       community.vmware.vmware_guest:
