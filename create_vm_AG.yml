@@ -81,13 +81,12 @@
  tasks:
     - name:  Changing network adapter
       vmware_guest_network:
-       
         folder: "/DCUIO/vm/AWX"
         validate_certs: no
         name: {{ vm_name }}
         networks:
-        - name: "vm_net_namemgmt"
-          connected: False
+          - name: "vm_net_namemgmt"
+            connected: False
          
         
     
