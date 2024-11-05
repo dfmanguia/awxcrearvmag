@@ -78,7 +78,11 @@
         name: bind9
         state: restarted
 
- tasks:
+- name: Changing network adapter
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
     - name:  Changing network adapter
       vmware_guest_network:
         folder: "/DCUIO/vm/AWX"
