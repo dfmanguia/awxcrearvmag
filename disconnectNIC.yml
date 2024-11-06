@@ -1,0 +1,18 @@
+---
+- name: Create VM from Vcenter Template
+  hosts: localhost
+  connection: local
+  gather_facts: false
+  tasks:
+    - name:  Changing network adapter
+      vmware_guest_network:
+        name: "{{ vm_name }}"
+        networks:
+        - name: "Vlan_12"
+          label: "Network adapter 1"
+          connected: False
+          state: absent
+        - label: "Network adapter 1"
+          state: new
+          connected: True
+          name: Vlan_13
