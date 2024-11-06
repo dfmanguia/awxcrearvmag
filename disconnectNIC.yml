@@ -6,6 +6,7 @@
   tasks:
     - name:  Changing network adapter
       community.vmware.vmware_guest_network:
+        validate_certs: false
         name: "{{ vm_name }}"
         networks:
         - network_name: "{{ vm_net_namemgmt }}"
