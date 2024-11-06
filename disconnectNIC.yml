@@ -7,5 +7,5 @@
         validate_certs: false
         name: "{{ vm_name }}"
         networks:
-        - network_name: "{{ vm_net_namemgmt }}"
+        - name: "{{ vm_net_namemgmt }}"
           connected: false
