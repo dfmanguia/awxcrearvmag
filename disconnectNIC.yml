@@ -1,8 +1,6 @@
 ---
 - name: Changing network adapter
   hosts: localhost
-  connection: local
-  gather_facts: false
   tasks:
     - name:  Changing network adapter
       community.vmware.vmware_guest_network:
@@ -10,4 +8,4 @@
         name: "{{ vm_name }}"
         networks:
         - network_name: "{{ vm_net_namemgmt }}"
-          connected: False
+          connected: false
