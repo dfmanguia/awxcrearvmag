@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
     - name:  Changing network adapter
-      community.vmware.vmware_guest_network:
+      community.vmware.vmware_guest:
         validate_certs: false
         name: "{{ vm_name }}"
         networks:
