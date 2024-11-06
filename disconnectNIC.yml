@@ -8,7 +8,5 @@
       community.vmware.vmware_guest_network:
         name: "{{ vm_name }}"
         networks:
-        - name: "{{ vm_net_namemgmt }}"
+        - network_name: "{{ vm_net_namemgmt }}"
           connected: False
-
-        
