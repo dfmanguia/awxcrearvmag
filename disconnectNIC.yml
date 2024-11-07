@@ -8,5 +8,5 @@
         name: "{{ vm_name }}"  
         folder: "/DCUIO/vm/AWX"
         networks:
-          - label: "Network adapter 3"
+          - name: "VLAN50_DCUIOIT"
             connected: false
