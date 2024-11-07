@@ -3,7 +3,7 @@
   hosts: localhost
   tasks:
     - name:  Changing network adapter
-      community.vmware.vmware_guest:
+      community.vmware.vmware_guest_network:
         validate_certs: false  
         name: "{{ vm_name }}"  
         folder: "/DCUIO/vm/AWX"
