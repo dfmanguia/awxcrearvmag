@@ -8,4 +8,3 @@
         name: "{{ vm_name }}"
         network_name: "VLAN50_DCUIOIT"
         connected: false
-        state: absent
