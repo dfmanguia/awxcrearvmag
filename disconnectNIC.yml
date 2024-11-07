@@ -1,12 +1,10 @@
----
+rf---
 - name: Changing network adapter
   hosts: localhost
   tasks:
     - name:  Changing network adapter
       community.vmware.vmware_guest_network:
         validate_certs: false  
-        name: "{{ vm_name }}"  
-        folder: "/DCUIO/vm/AWX"
-        networks:
-          - name: "VLAN50_DCUIOIT"
-            connected: false
+        name: "{{ vm_name }}"
+        network_name: "VLAN50_DCUIOIT"
+        connected: false
