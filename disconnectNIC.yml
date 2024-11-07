@@ -8,5 +8,6 @@
         name: "{{ vm_name }}"  
         folder: "/DCUIO/vm/AWX"
         networks:
-          - name: "dvportgroup-3076"
+          - name: "{{ vm_name }}"
+            label: "Network adapter 3"
             connected: false
