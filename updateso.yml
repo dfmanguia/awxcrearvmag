@@ -5,7 +5,7 @@
   gather_facts: false
   tasks:
   
-  - name: Upgrade all packages
-  ansible.builtin.yum:
-    name: '*'
+  - name: Update all Debian/Ubuntu packages to their latest version
+  ansible.builtin.apt:
+    name: "*"
     state: latest
