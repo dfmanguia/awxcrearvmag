@@ -1,21 +1,12 @@
 ---
-- name: " This playbook is to apply patches to linux servers"
-  hosts: node1,node2
-  serial: 2
+- name: update SO
+  hosts: "{{ vm_ipmgmt }}" # This is the IP that is set for the template, if you use a different IP update here.
+  become: true
+  gather_facts: false
   tasks:
-  - name: install httpd
-    yum:
-     name: httpd
-     state: latest
-    delegate_to: node2
-  - name: "Check whether application and database are running"
-    script: /home/ansible/dev/appcheck.sh
-    args:
-      executable: /bin/bash
-    ignore_errors: true
-    register: application_process_check
+  
   - name: "Will check and start patching on linux servers"
-    fail: msg='{{ inventory_hostname }} have running Application. Please stop application and then proceed with patch.'
+    fail: msg='{{ vm_ipmgmt }} have running Application. Please stop application and then proceed with patch.'
     when: application_process_check.stdout == "process is running"
   - name: "Applying patches to the server"
     yum: name=kernel state=latest
@@ -39,7 +30,7 @@
     # Now we will run a local 'ansible -m ping' on this host until it returns.
     # This works with the existing ansible hosts inventory and so any custom ansible_ssh_hosts definitions are being used
   - name: check the system status
-    local_action: shell ansible -u ansible -m ping {{ inventory_hostname }}
+    local_action: shell ansible -u ansible -m ping {{ vm_ipmgmt }}
     register: resultThe complete playbook, including all tasks, is shown above.
     until: result.rc == 0
     retries: 30
