@@ -78,15 +78,5 @@
         name: bind9
         state: restarted
 
-- name: Changing network adapter
-  hosts: localhost
-  tasks:
-    - name:  Changing network adapter
-      community.vmware.vmware_guest_network:
-        validate_certs: false  
-        name: "{{ vm_name }}"
-        network_name: "VLAN50_DCUIOIT"
-        label: Network adapter 3
-        connected: false
 
         
