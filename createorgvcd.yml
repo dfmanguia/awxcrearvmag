@@ -1,14 +1,18 @@
 ---
-- name: vCloudDirectorAnsible
-   hosts: localhost
-   environment:
-	 env_user: "{{ vcloud_username }}"
-	 env_password: "{{ vcloud_password }}"
-	 env_host: "{{ vcloud_host }}"  
-	 env_verify_ssl_certs: false
+#- name: vCloudDirectorAnsible
+#   hosts: localhost
+#   environment:
+#	 env_user: "{{ vcloud_username }}"
+#	 env_password: "{{ vcloud_password }}"
+#	 env_host: "{{ vcloud_host }}"  
+#	 env_verify_ssl_certs: false
 
-- name: create catalog
-   vcd_catalog:
-	catalog_name: "test_catalog"
-	description: "test_description"
+- name: create org
+   vcd_org:
+	org_name: "test_org"
+	full_name: "test_org"
+	is_enabled : "false"
 	state: "present"
+ 	user: "{{ vcloud_username }}"
+	password: "{{ vcloud_password }}"
+ 	host: "{{ vcloud_host }}"
