@@ -8,6 +8,7 @@
 #	 env_verify_ssl_certs: false
 
 - name: create org
+   hosts: localhost
    vcd_org:
 	org_name: "test_org"
 	full_name: "test_org"
