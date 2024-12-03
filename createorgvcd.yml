@@ -12,7 +12,6 @@
          org_name: "test_org"
          full_name: "test_org"
          state: "present"
-         
-#      user: "{{ vcloud_username }}"
-#      password: "{{ vcloud_password }}"
-#      host: "{{ vcloud_host }}"
+         user: "{{ vcloud_username }}"
+         password: "{{ vcloud_password }}"
+         host: "{{ vcloud_host }}"
