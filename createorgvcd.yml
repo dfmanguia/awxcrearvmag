@@ -1,11 +1,11 @@
 ---
 - name: vCloudDirectorAnsible
-   hosts: localhost
-   environment:
-	 env_user: "{{ vcloud_username }}"
-	 env_password: "{{ vcloud_password }}"
-	 env_host: "{{ vcloud_host }}"  
-	 env_verify_ssl_certs: false
+  hosts: localhost
+  environment:
+       env_user: "{{ vcloud_username }}"
+       env_password: "{{ vcloud_password }}"
+       env_host: "{{ vcloud_host }}"  
+       env_verify_ssl_certs: false
 #---
 #- name: create org
 #  vcd_org:
