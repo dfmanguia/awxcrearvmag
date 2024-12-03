@@ -6,7 +6,7 @@
        env_password: "{{ vcloud_password }}"
        env_host: "{{ vcloud_host }}"  
        env_verify_ssl_certs: false
-
+tasks:
 - name: create org
   vcd_org:
        org_name: "test_org"
