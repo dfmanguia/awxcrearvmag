@@ -13,7 +13,7 @@
          full_name: "test_org"
          is_enabled : "false"
          state: "present"
-         org: "PROVIDER PORTAL"
+         org: "test"
 #      user: "{{ vcloud_username }}"
 #      password: "{{ vcloud_password }}"
 #      host: "{{ vcloud_host }}"
