@@ -1,7 +1,9 @@
----
-- name: Create organization
-  organization:
-    name: "Foo"
-    description: "Foo bar organization"
-    state: present
-    controller_config_file: "~/tower_cli.cfg"
+- name: vCloudDirectorAnsible
+   hosts: localhost
+   environment:
+	 env_user: VCD_USER_NAME
+	 env_password: VCD_USER_PASSWORD
+	 env_host: VCD_URL            ## VCD Instance URL
+	 env_org: VCD_ORG             ## VCD ORG to login
+	 env_api_version: PYVCLOUD_API_VERSION
+	 env_verify_ssl_certs: false
