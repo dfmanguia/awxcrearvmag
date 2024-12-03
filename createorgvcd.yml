@@ -15,3 +15,4 @@
          user: "{{ vcloud_username }}"
          password: "{{ vcloud_password }}"
          host: "{{ vcloud_host }}"
+         org: "System"
