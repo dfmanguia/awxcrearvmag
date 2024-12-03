@@ -1,18 +1,19 @@
 ---
 - name: vCloudDirectorAnsible
   hosts: localhost
-  #environment:
-  #     env_user: "{{ vcloud_username }}"
-  #     env_password: "{{ vcloud_password }}"
-  #     env_host: "{{ vcloud_host }}"  
-  #     env_verify_ssl_certs: false
+  environment:
+       env_user: "{{ vcloud_username }}"
+       env_password: "{{ vcloud_password }}"
+       env_host: "{{ vcloud_host }}"  
+       env_verify_ssl_certs: false
+       env_org: "System"
   tasks:
   - name: create org
     vcd_org:
          org_name: "test_org"
          full_name: "test_org"
          state: "present"
-         user: "{{ vcloud_username }}"
-         password: "{{ vcloud_password }}"
-         host: "{{ vcloud_host }}"
-         org: "System"
+ #        user: "{{ vcloud_username }}"
+ #        password: "{{ vcloud_password }}"
+ #        host: "{{ vcloud_host }}"
+ #        org: "System"
