@@ -16,7 +16,6 @@
          full_name: test_org
          is_enabled: true
          state: present
-          name: create org
     register: output
  #        user: "{{ vcloud_username }}"
  #        password: "{{ vcloud_password }}"
