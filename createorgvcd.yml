@@ -12,9 +12,12 @@
   tasks:
   - name: create org
     vcd_org:
-         org_name: "test_org"
-         full_name: "test_org"
-         state: "present"
+         org_name: test_org
+         full_name: test_org
+         is_enabled: true
+         state: present
+          name: create org
+    register: output
  #        user: "{{ vcloud_username }}"
  #        password: "{{ vcloud_password }}"
  #        host: "{{ vcloud_host }}"
