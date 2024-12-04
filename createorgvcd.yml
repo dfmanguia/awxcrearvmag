@@ -6,7 +6,9 @@
        env_password: "{{ vcloud_password }}"
        env_host: "{{ vcloud_host }}"  
        env_verify_ssl_certs: false
-       env_org: "System"
+       env_api_version: 32.0
+       env_org: System
+
   tasks:
   - name: create org
     vcd_org:
