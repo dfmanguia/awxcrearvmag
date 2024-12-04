@@ -10,11 +10,11 @@
 
   tasks:
   - name: read org
-  vcd_org:
-       org_name: Cliente-test
-       is_enabled: true
-       operation: read
-       register: output
+    vcd_org:
+         org_name: Cliente-test
+         is_enabled: true
+         operation: read
+         register: output
 
   - name: read org output
     debug:
