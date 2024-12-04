@@ -7,7 +7,6 @@
        env_host: "{{ vcloud_host }}"  
        env_verify_ssl_certs: false
        env_api_version: 32.0
-       env_org: System
 
   tasks:
   - name: create org
